@@ -19,8 +19,7 @@ crossorigin=""></script>
 	<div id="mapid" style="width: 600px; height: 400px; position: relative;"></div>
 	
 	<script>
-var mymap = L.map('mapid').setView(<LatLng> 48.523605, 9.056216<Zoom/pan options).setZoom(<Number> 15, <Zoom/pan options>);
-
+var mymap = L.map('mapid').setView([48.523605, 9.056216]).setZoom(15);
 var OSM_background =
 L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png').addTo(mymap);
 
