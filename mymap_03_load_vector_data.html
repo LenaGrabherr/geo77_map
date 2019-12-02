@@ -52,12 +52,7 @@
 		attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 	});
 	
-	// put all basemaps in a list
-	var basemaps = {
-		"Open Street Map DE": osm_basemap,
-		"Open Topo Map": otm_basemap,
-		"Black & White": OpenMapSurfer_Grayscale_basemap
-	};
+	
 	
 
 	
@@ -2650,9 +2645,26 @@ attribution: "SG.Geodatenzentrum"
 });
 overlay_DTK1000.addTo(mymap)
 
+// put all basemaps in a list
+	var basemaps = {
+		"Open Street Map DE": osm_basemap,
+		"Open Topo Map": otm_basemap,
+		"Black & White": OpenMapSurfer_Grayscale_basemap
+	};
+
+	// Do the same with the Overlay features
+var overlays = {
+“Earthquakes in Germany": overlay_eq_points,
+“Topo Map 1:1 Mio": overlay_DTK1000};
+// Add them to your Layer Control
+var legend = L.control.layers(basemaps, overlays, {collapsed:
+false}).addTo(mymap);
 
 
-	
+
+
+
+
 </script>
 	
 
