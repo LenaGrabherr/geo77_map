@@ -2645,14 +2645,6 @@ attribution: "SG.Geodatenzentrum"
 });
 overlay_DTK1000.addTo(mymap)
 
-// put all basemaps in a list
-	var basemaps = {
-		"Open Street Map DE": osm_basemap,
-		"Open Topo Map": otm_basemap,
-		"Black & White": OpenMapSurfer_Grayscale_basemap
-	};
-
-	// Do the same with the Overlay features
 var overlays = {
 “Earthquakes in Germany": overlay_eq_points,
 “Topo Map 1:1 Mio": overlay_DTK1000};
@@ -2661,10 +2653,7 @@ var legend = L.control.layers(basemaps, overlays, {collapsed:
 false}).addTo(mymap);
 
 
-
-
-
-
+	
 </script>
 	
 
