@@ -2629,10 +2629,20 @@
 
 		]
 		}
+	var orangeMarker = {
+radius: 8,
+fillColor: "#ff7800",
+color: "#000",
+weight: 1,
+opacity: 1,
+fillOpacity: 0.6
+};
+	var overlay_eq_points = L.geoJSON(eq_pointss, {
+pointToLayer: function (feature, latlng) {
+return L.circleMarker(latlng, orangeMarker);
+}}).addTo(mymap);
 
-	var overlay_eq_points = L.geoJSON(eq_points).addTo(mymap);
 
-	
 	
 </script>
 	
